@@ -12,6 +12,7 @@
       "module": "commonjs",
       "resolveJsonModule": true,
       "target": "esnext",
+      "experimentalDecorators": true,
       "jsx": "react",
       "jsxFactory": "React.createElement",
       "esModuleInterop": true,

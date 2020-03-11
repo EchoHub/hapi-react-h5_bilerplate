@@ -19,6 +19,7 @@ module.exports = merge({}, common, {
     }
   },
   plugins: [
+    new webpack.HotModuleReplacementPlugin(),
     new HTMLWebpackPlugin({
       template: './src/index.html',
       showErrors: true
