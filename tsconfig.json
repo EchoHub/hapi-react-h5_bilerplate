@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+      "allowJs": true,
+      "checkJs": true,
+      "outDir": "./dist/",
+      "baseUrl": ".",
+      "rootDir": ".",
+      "sourceMap": true,
+      "noImplicitAny": false,
+      "noImplicitThis": false,
+      "removeComments": true,
+      "module": "commonjs",
+      "resolveJsonModule": true,
+      "target": "esnext",
+      "jsx": "react",
+      "jsxFactory": "React.createElement",
+      "esModuleInterop": true,
+      "typeRoots": [
+        "node_modules/@types",
+        "global.d.ts"
+      ],
+      "paths": {
+          "@/*": ["src/*"]
+      }
+  },
+  "exclude": [
+      "node_modules",
+      "dist"
+  ]
+}

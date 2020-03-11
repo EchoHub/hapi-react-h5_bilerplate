@@ -1,0 +1,69 @@
+{
+  "name": "hapi-react-h5_boilerplate",
+  "version": "1.0.0",
+  "description": "基于React 无线端H5开发模版",
+  "main": "index.js",
+  "scripts": {
+    "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}'",
+    "dev": "export NODE_ENV=development && webpack-dev-server --color --config config/dev.js",
+    "server": "node server.js",
+    "build:test": "export NODE_ENV=production && webpack --config config/prod.js --progress",
+    "build": "export NODE_ENV=production && webpack --config config/prod.js --progress",
+    "analyzer:prod": "export Analyzer=true &&  export NODE_ENV=production && webpack --config config/prod.js --progress"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EchoHub/hapi-react-h5_bilerplate.git"
+  },
+  "keywords": [
+    "React",
+    "H5",
+    "hapi"
+  ],
+  "author": "echohub",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EchoHub/hapi-react-h5_bilerplate/issues"
+  },
+  "homepage": "https://github.com/EchoHub/hapi-react-h5_bilerplate#readme",
+  "dependencies": {
+    "@types/lodash": "^4.14.149",
+    "@types/react": "^16.9.23",
+    "dll-link-webpack-plugin": "^3.2.1",
+    "express": "^4.17.1",
+    "lodash": "^4.17.15",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "react-router": "^5.1.2",
+    "react-router-dom": "^5.1.2",
+    "source-map-loader": "^0.2.4",
+    "typescript": "^3.8.3",
+    "webpack": "^4.42.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-middleware": "^3.7.2"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.7.4",
+    "awesome-typescript-loader": "^5.2.1",
+    "axios": "^0.19.2",
+    "classnames": "^2.2.6",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.4.2",
+    "file-loader": "^5.1.0",
+    "html-webpack-plugin": "^3.2.0",
+    "js-cookie": "^2.2.1",
+    "json-loader": "^0.5.7",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.13.1",
+    "postcss-loader": "^3.0.0",
+    "query-string": "^6.11.1",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.1.3",
+    "terser-webpack-plugin": "^2.3.5",
+    "url-loader": "^3.0.0",
+    "vconsole": "^3.3.4",
+    "webpack-bundle-analyzer": "^3.6.1",
+    "webpack-dev-server": "^3.10.3",
+    "webpack-merge": "^4.2.2"
+  }
+}
