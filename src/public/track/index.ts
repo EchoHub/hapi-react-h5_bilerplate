@@ -5,15 +5,13 @@ import { genRandomStr } from '@/public/utils/index';
 /**
  * 开启上报开关
  */
-const traceSwitch = true || process.env.TRACE;
+const traceSwitch = process.env.TRACE;
 
 /**
  * 上报地址
  */
-export const TrackUrl = 'https://dataplatform-dev.shulidata.com/track/receive';
-export const ExcapturerUrl = 'https://dataplatform-dev.shulidata.com/log/receive';
-//  'https://dataplatform-dev.shulidata.com/track/receive';
-// 'https://dataplatform.shulidata.com/log/receive';
+export const TrackUrl = 'xxx';
+export const ExcapturerUrl = 'xxx';
 let sessionId = +new Date() + genRandomStr(16);
 export interface TrackParams {
   eventId: string,
