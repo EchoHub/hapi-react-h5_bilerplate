@@ -1,7 +1,9 @@
 import * as React from 'react';
 import cx from 'classnames';
 import trackComponent from '@/public/track';
+import { history } from '@/pages/routers';
 import './index.scss';
+import { get } from '@/public/http/request';
 export interface IndexProps {
   name?: string
 }
@@ -14,29 +16,22 @@ export default class Index extends React.Component<IndexProps, {}> {
     name: 'Welcome Hapi H5 !!!',
   };
   readonly state = {
-    error: ''
   };
   componentDidMount() {
-    var a;
-    this.setState({
-      a: a.a
-    })
-  }
-
-  componentDidCatch(error, info) {
-    this.setState({
-      error
+    get('https://www.baidu.com', {
+      params: {
+        a: 1
+      }
     });
   }
 
   public render() {
-    if (this.state.error) { // 如果页面崩溃，则显示下面的UI
-      return (
-        <div>123123123</div>
-      );
-    }
     return (<div className={cx('index')}>
       {this.props.name}
+      <br />
+      <button onClick={() => { 
+        history.push('/demo') 
+      }}>走 起～～</button>
     </div>);
   }
 }

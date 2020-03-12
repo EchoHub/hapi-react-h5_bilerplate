@@ -1,10 +1,12 @@
 const webpack = require('webpack');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CssExtractPlugin = require('mini-css-extract-plugin');
+const HardSourceWebpackPlugin = require('hard-source-webpack-plugin');
 const path = require('path');
 module.exports = {
   entry: {
     main: path.resolve(__dirname, './../src/app.tsx'),
+    vendors: ['react', 'react-dom', 'lodash']
   },
   output: {
     filename: '[name].[hash].bundle.js',
@@ -78,6 +80,7 @@ module.exports = {
     new CssExtractPlugin({
       filename: '[name].css',
       chunkFilename: '[name].[hash].js'
-    })
+    }),
+    new HardSourceWebpackPlugin()
   ],
 }

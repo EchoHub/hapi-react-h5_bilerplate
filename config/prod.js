@@ -20,9 +20,5 @@ module.exports = merge({}, common, {
             minify: true,
             hash: true
         }),
-        // new webpack.HashedModuleIdsPlugin(),
-        new DllLinkPlugin({
-          config: require('./prod.dll.config.js')
-        })
     ].concat(process.env.Analyzer ? new BundleAnalyzerPlugin() : []),
 })
