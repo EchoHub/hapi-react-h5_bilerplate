@@ -4,7 +4,7 @@
   "description": "基于React 无线端H5开发模版",
   "main": "index.js",
   "scripts": {
-    "pre-commit": "eslint src/**/**.{tsx,ts,js}",
+    "precommit": "eslint src/**/**.{tsx,ts,js}",
     "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}'",
     "dev": "export NODE_ENV=development && webpack-dev-server --color --config config/dev.js",
     "server": "node server.js",
