@@ -14,7 +14,7 @@
     "uw:build": "export NODE_ENV=production && webpack --config config/prod.js --progress",
     "analyzer:prod": "export Analyzer=true &&  export NODE_ENV=production && webpack --config config/prod.js --progress"
   },
-  "pre-commit": ["lint"],
+  "pre-commit": ["lint-staged"],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/EchoHub/hapi-react-h5_bilerplate.git"
