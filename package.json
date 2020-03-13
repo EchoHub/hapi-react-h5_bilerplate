@@ -4,15 +4,16 @@
   "description": "基于React 无线端H5开发模版",
   "main": "index.js",
   "scripts": {
+    "pre-commit": "eslint src/**/**.{tsx,ts,js}",
     "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}'",
     "dev": "export NODE_ENV=development && webpack-dev-server --color --config config/dev.js",
     "server": "node server.js",
     "build:test": "export NODE_ENV=production && webpack --config config/prod.js --progress",
     "build": "export NODE_ENV=production && webpack --config config/prod.js --progress",
-    "analyzer:prod": "export Analyzer=true &&  export NODE_ENV=production && webpack --config config/prod.js --progress",
     "uw:dev": "cross-env NODE_ENV=development && webpack-dev-server --color --config config/dev.js",
     "uw:build:test": "export NODE_ENV=production && webpack --config config/prod.js --progress",
-    "uw:build": "export NODE_ENV=production && webpack --config config/prod.js --progress"
+    "uw:build": "export NODE_ENV=production && webpack --config config/prod.js --progress",
+    "analyzer:prod": "export Analyzer=true &&  export NODE_ENV=production && webpack --config config/prod.js --progress"
   },
   "repository": {
     "type": "git",
@@ -53,12 +54,20 @@
     "webpack-dev-middleware": "^3.7.2"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.23.0",
+    "@typescript-eslint/parser": "^2.23.0",
     "autoprefixer": "^9.7.4",
     "awesome-typescript-loader": "^5.2.1",
     "axios": "^0.19.2",
     "classnames": "^2.2.6",
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^3.4.2",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "^1.7.0",
     "file-loader": "^5.1.0",
     "html-webpack-plugin": "^3.2.0",
     "js-cookie": "^2.2.1",
