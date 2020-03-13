@@ -1,9 +1,8 @@
 import * as React from 'react';
 import cx from 'classnames';
 import trackComponent from '@/public/track';
-import { history } from '@/pages/routers';
+import Hapi from '@/assets/hapi.jpg';
 import './index.scss';
-import { get } from '@/public/http/request';
 export interface IndexProps {
   name?: string
 }
@@ -17,21 +16,12 @@ export default class Index extends React.Component<IndexProps, {}> {
   };
   readonly state = {
   };
-  componentDidMount() {
-    get('https://www.baidu.com', {
-      params: {
-        a: 1
-      }
-    });
-  }
+  componentDidMount() { }
 
   public render() {
     return (<div className={cx('index')}>
-      {this.props.name}
-      <br />
-      <button onClick={() => { 
-        history.push('/demo') 
-      }}>走 起～～</button>
+      <img src={Hapi} alt='' />
+      <h2>{this.props.name}</h2>
     </div>);
   }
 }
