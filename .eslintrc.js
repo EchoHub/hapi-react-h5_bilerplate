@@ -24,6 +24,12 @@ module.exports = {
     '@typescript-eslint',
   ],
   rules: {
-    "import/no-extraneous-dependencies": false
+    "import/extensions": 0,
+    "import/no-extraneous-dependencies": [2, { "devDependencies": true }],
+    "import/no-unresolved": 0,
+    "react/static-property-placement": 0,
+    "react/state-in-constructor": 0,
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".tsx"] }],
+    "react/jsx-curly-brace-presence": 0
   },
 };
