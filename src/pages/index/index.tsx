@@ -1,5 +1,5 @@
 import * as React from 'react';
-import cx from 'classnames';
+import classnames from 'classnames';
 import trackComponent from '@/public/track';
 import Hapi from '@/assets/hapi.jpg';
 import './index.scss';
@@ -15,11 +15,12 @@ export default class Index extends React.Component<IndexProps, {}> {
     name: 'Welcome Hapi H5 !!!',
   };
   readonly state = {
+    console.log(1);
   };
   componentDidMount() { }
 
   public render() {
-    return (<div className={cx('index')}>
+    return (<div className={classnames('index')}>
       <img src={Hapi} alt='' />
       <h2>{this.props.name}</h2>
     </div>);
