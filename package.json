@@ -4,7 +4,7 @@
   "description": "基于React 无线端H5开发模版",
   "main": "index.js",
   "scripts": {
-    "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}'",
+    "lint": "eslint src/**/*.{js,ts,tsx}",
     "dev": "export NODE_ENV=development && webpack-dev-server --color --config config/dev.js",
     "server": "node server.js",
     "build:test": "export NODE_ENV=production && webpack --config config/prod.js --progress",
@@ -14,7 +14,7 @@
     "uw:build": "export NODE_ENV=production && webpack --config config/prod.js --progress",
     "analyzer:prod": "export Analyzer=true &&  export NODE_ENV=production && webpack --config config/prod.js --progress"
   },
-  "pre-commit": ["lint-staged"],
+  "pre-commit": ["lint"],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/EchoHub/hapi-react-h5_bilerplate.git"
